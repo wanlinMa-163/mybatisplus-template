@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+</head>
+<body>
+首页
+<div id="div1"></div>
+<button>点我</button>
+</body>
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+     $.ajax({
+                url:"/test",
+                success:function(result){
+                    $("#div1").(result);
+                }
+        });
+  });
+});
+
+
+</script>
+</html>
